@@ -26,7 +26,10 @@ a {
   padding-left: 10px;
   margin-right: 10px;
 }
-.first-note {
+.first-tab {
+  display: flex;
+}
+.first-note, .sign-in-out, .make-new-code{
   width: 100px;
   height: 20px;
   margin: 5px 0px 0px 0px;
@@ -34,7 +37,8 @@ a {
   padding: 2px;
   text-align: center;
 }
-.first-note a{
+.first-tab a{
   color: white;
   font-size: 15px;
 }
+

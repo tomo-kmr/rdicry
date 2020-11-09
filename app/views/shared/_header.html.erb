@@ -11,7 +11,21 @@
         検索
       </button>
   <% end %>
-  <div class='first-note'>
-    <%=link_to 'はじめに', users_path, class:'first-note-link' %>
+  <div class='first-tab'>
+    <div class='first-note'>
+      <%=link_to 'はじめに', users_path, class:'first-note-link' %>
+    </div>
+    <div class='sign-in-out'>
+      <% if user_signed_in? %>
+        <%=link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+      <% else %>
+         <%=link_to 'ログイン', new_user_session_path %>
+      <% end %>
+    </div>
+    <div class='make-new-code'>
+      <% if user_signed_in? %>
+        <%=link_to '新規作成', "#" %>
+      <% end %>
+    </div>
   </div>
  </div>
