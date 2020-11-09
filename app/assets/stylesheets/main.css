@@ -1,0 +1,45 @@
+.main {
+  width: 100vw;
+  height: calc(100vh - 105px);
+  background-color: rgb(235, 232, 232);
+  margin-top: 10px;
+  display: flex;
+}
+.main-left {
+  width: 10vw;
+  height: calc(100vh - 105px);
+  padding: 7px 0 0 3vw;
+}
+
+.main-center {
+  width: 65vw;
+  height: calc(100vh - 105px);
+  background-color: white;
+  padding: 7px 10px 0 10px;
+}
+
+.main-right {
+  width: 25vw;
+  height: calc(100vh - 105px);
+  padding: 7px 0 0 10px;
+}
+
+.index-table {
+  margin: 10px 0 10px;
+  width: 100%;
+}
+
+.index-no {
+  width: 7%;
+  background-color: rgb(172, 243, 162);
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.index-title {
+  width: 80%;
+  padding: 7px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}

@@ -1,0 +1,36 @@
+<%= render "shared/header" %>
+
+<div class='main' >
+  <div class='main-left' >
+    <p class='main-left-title'>
+      カテゴリ別
+    </p>
+  </div>
+  <div class='main-center' >
+    <div>
+      <h2>はじめに</h2>
+      <p >
+        このサイトはRuby on railsでアプリを作成したことがある方を対象として、〜したい時に、どう書くかのコードをまとめたサイトになります。<br>
+        プログラミングスクールで学んだことが中心で、理屈等は抜いてシンプルな内容にするようにしています。<br>
+        (初めてのアプリ兼自分用の備忘録になります)
+      </p>
+      <p>
+      <br><br>
+        作成環境<br>
+        Mac OS Catalina 10.15.6<br>
+        ruby 2.6.5<br>
+        rails 6.0.0<br>
+      </p>
+    </div>
+    <div class='main-admin'>
+      <h2>以下は管理用です</h2>
+        <%=link_to 'サインイン', new_user_session_path, class:'' %>
+        <%=link_to '登録', new_user_registration_path, class:'' %>
+    </div>
+  </div>
+  <div class='main-right' >
+    <p class='main-right-title'>
+      新着内容
+    </p>
+  </div>
+</div>

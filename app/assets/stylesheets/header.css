@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+}
+.header {
+  width: 100vw;
+  height: 110px;
+  padding: 0.5vh 3vw 0 3vw;
+  background-color: #CC3333;
+}
+
+.header-title {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.header-sub-title {
+  margin: 0 auto 4px;
+  font-size: 14px;
+  color: white;
+}
+
+.search-form>.input-box {
+  width: 180px;
+  height: 20px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+.first-note {
+  width: 100px;
+  height: 20px;
+  margin: 5px 0px 0px 0px;
+  border: 1px solid white;
+  padding: 2px;
+  text-align: center;
+}
+.first-note a{
+  color: white;
+  font-size: 15px;
+}
