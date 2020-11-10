@@ -1,0 +1,40 @@
+.show-category{
+  font-size: 15px;
+}
+.show-title{
+  font-size: 20px;
+  width:100%;
+  border-bottom: 1px solid black;
+  margin-bottom: 7px;
+}
+.show-summary{
+  font-size: 15px;
+  border-bottom: 1px solid black;
+  margin-bottom: 7px;
+  min-height: 75px;
+}
+.show-detail{
+  font-size: 15px;
+  border-bottom: 1px solid black;
+  margin-bottom: 7px;
+  min-height: 400px;
+}
+.show-supplement{
+  font-size: 15px;
+  border-bottom: 1px solid black;
+  margin-bottom: 7px;
+}
+
+.main-center h1 {
+  font-size : 48px; 
+  line-height : 1;
+}
+
+.main-center h2 {
+  font-size : 36px;
+  line-height : 1.3333;
+}
+.main-center h3 {
+  font-size : 24px;
+  line-height : 1;
+}

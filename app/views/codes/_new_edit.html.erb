@@ -1,0 +1,28 @@
+<div class="make-code">
+  <%= form_with model: @code, local: true do |f| %>
+    <div class="code-no-totle">
+      <%= f.text_area :codeno, class:"code", id:"code-no", placeholder:"No." %>
+      <%= f.text_area :title, class:"code", id:"code-title", placeholder:"タイトル" %> 
+    </div>
+    <div class="code-category">
+      <%= f.text_area :category, class:"code", id:"code-category", placeholder:"カテゴリー" %>
+    </div>
+    <div class="code-summary">
+      <%= f.text_area :summary, class:"code", id:"code-summary", placeholder:"要約" %>
+    </div>
+    <div class="code-detail">
+      <%= f.text_area :detail, class:"code", id:"code-detail", placeholder:"詳細" %>
+    </div>
+    <div class="code-supplement">
+      <%= f.text_area :supplement, class:"code", id:"code-supplement", placeholder:"補足" %>
+    </div>
+    <div class="sell-btn-contents">
+        <% if @code.codeno.present? %>
+          <%= f.submit "変更" ,class:"make-btn" %>
+        <% else %>
+          <%= f.submit "作成" ,class:"make-btn" %>
+        <% end %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  <% end %>
+</div>

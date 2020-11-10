@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_11_09_124857) do
     t.bigint "user_id", null: false
     t.integer "codeno", null: false
     t.string "title", null: false
+    t.string "category", null: false
     t.text "summary", null: false
     t.text "detail", null: false
     t.text "supplement"

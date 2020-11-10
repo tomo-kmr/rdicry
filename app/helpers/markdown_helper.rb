@@ -1,4 +1,7 @@
-module ApplicationHelper
+module MarkdownHelper
+  require 'redcarpet'
+  require 'coderay'
+  
   REDCARPET_OPTIONS = {
     autolink: true,
     space_after_headers: true,

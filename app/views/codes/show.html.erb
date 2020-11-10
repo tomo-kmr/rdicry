@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+
+<div class='main' >
+  <div class='main-left' >
+    <p class='main-left-title'>
+      カテゴリ別
+    </p>
+  </div>
+  <div class='main-center' >
+    <div class='show-category'>
+      カテゴリー: <%= @code.category %>
+    </div>
+    <div class='show-title'>
+      タイトル: <%= @code.title %>
+    </div>
+    <div class='show-summary'>
+      要約<br>
+      <%= @code.summary %>
+    </div>
+    <div class='show-detail'>
+      <%# 詳細<br> %>
+      <%= markdown_to_html(@code.detail).html_safe %>
+
+    </div>
+    <div class='show-supplement'>
+      補足<br>
+      <%= @code.supplement %>
+    </div>
+    <% if user_signed_in? && current_user.admin? %>
+      <%= button_to "編集へ", edit_code_path(@code.id), method: :get %>
+    <% end %>
+  </div>
+  <div class='main-right' >
+    <p class='main-right-title'>
+      新着内容
+    </p>
+  </div>
+</div>

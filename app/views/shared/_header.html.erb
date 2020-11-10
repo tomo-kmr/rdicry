@@ -1,8 +1,8 @@
 <div class='header' >
-  <h2 class='header-title'>
-    プログラミング初心者のためのまとめ
-  </h2>
-  <p  class='header-sub-title'>
+  <div class='header-title'>
+    <%=link_to 'プログラミング初心者のためのまとめ', root_path %>
+  </div>
+  <p class='header-sub-title'>
     Ruby on railsを学習し始めた自分が、〜したい時どう書くんだったっけ？をまとめたサイトです
   </p>
   <%= form_with(url: "", local: true, method: :get, class: "search-form") do |form| %>
@@ -22,10 +22,10 @@
          <%=link_to 'ログイン', new_user_session_path %>
       <% end %>
     </div>
-    <div class='make-new-code'>
-      <% if user_signed_in? %>
-        <%=link_to '新規作成', "#" %>
-      <% end %>
-    </div>
+    <% if user_signed_in? && current_user.admin? %>
+      <div class='make-new-code'>
+        <%=link_to '新規作成', new_code_path %>
+      </div>
+    <% end %>
   </div>
  </div>

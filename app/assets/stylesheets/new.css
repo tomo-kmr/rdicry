@@ -1,0 +1,42 @@
+.make-code{
+  padding: 20px 0 0 3vw;
+}
+
+.code-no-totle{
+  display: flex;
+  margin-bottom: 20px;
+}
+.code-no-totle>#code-no{
+  height: 30px;
+  width: 60px;
+  margin-right: 40px;
+  padding-left: 10px;
+}
+.code-no-totle>#code-title{
+  height: 30px;
+  width: 50vw;
+  padding-left: 10px;
+}
+#code-category{
+  height: 30px;
+  width: 20vw;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+#code-summary{
+  height: 100px;
+  width: 60vw;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+#code-detail{
+  height: 400px;
+  width: 60vw;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+#code-supplement{
+  height: 200px;
+  width: 60vw;
+  padding-left: 10px;
+}

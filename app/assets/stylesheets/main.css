@@ -29,16 +29,16 @@
   width: 100%;
 }
 
-.index-no {
-  width: 7%;
+.index-category {
+  width: 18%;
   background-color: rgb(172, 243, 162);
   border: 1px solid #dedede;
   font-size: 14px;
-  text-align: center;
+  padding: 7px;
 }
 
 .index-title {
-  width: 80%;
+  width: 68%;
   padding: 7px;
   border: 1px solid #dedede;
   font-size: 14px;

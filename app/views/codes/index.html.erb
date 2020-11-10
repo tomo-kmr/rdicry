@@ -13,13 +13,10 @@
     <table class='index-table'>
       <tbody>
         <tr>
-          <th class='index-no'>No.</th>
+          <th class='index-category'>カテゴリ</th>
           <td class='index-title'>タイトル</td>
         </tr>
-        <tr>
-          <th class='index-no'>No.1</th>
-          <td class='index-title'><% "#" %></td>
-        </tr>
+        <%= render partial: 'code', collection: @codes %>
       </tbody>
     </table>
   </div>
