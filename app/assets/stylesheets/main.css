@@ -43,3 +43,7 @@
   border: 1px solid #dedede;
   font-size: 14px;
 }
+
+.main-left-link > a{
+  display: block;
+}

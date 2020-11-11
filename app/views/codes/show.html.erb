@@ -1,12 +1,10 @@
 <%= render "shared/header" %>
 
 <div class='main' >
-  <div class='main-left' >
-    <p class='main-left-title'>
-      カテゴリ別
-    </p>
-  </div>
+  <%= render "shared/category" %>
+
   <div class='main-center' >
+    <%= link_to "目次に戻る", root_path %>
     <div class='show-category'>
       カテゴリー: <%= @code.category %>
     </div>
@@ -14,25 +12,24 @@
       タイトル: <%= @code.title %>
     </div>
     <div class='show-summary'>
-      要約<br>
-      <%= @code.summary %>
+      <b>●要約</b><br>
+      <%= safe_join(@code.summary.split("\n"),tag(:br)) %>
     </div>
     <div class='show-detail'>
-      <%# 詳細<br> %>
+      <b>●詳細</b><br>
       <%= markdown_to_html(@code.detail).html_safe %>
 
     </div>
     <div class='show-supplement'>
-      補足<br>
-      <%= @code.supplement %>
+      <b>●補足</b><br>
+      <%= safe_join(@code.supplement.split("\n"),tag(:br)) %>
     </div>
     <% if user_signed_in? && current_user.admin? %>
-      <%= button_to "編集へ", edit_code_path(@code.id), method: :get %>
+      <div class = "admin-btn">
+        <%= button_to "編集へ", edit_code_path(@code.id), method: :get, class: "edit-btn"%>
+        <%= button_to "削除", code_path(@code.id), method: :delete %>
+      </div>
     <% end %>
   </div>
-  <div class='main-right' >
-    <p class='main-right-title'>
-      新着内容
-    </p>
-  </div>
+  <%= render "shared/leftside" %>
 </div>

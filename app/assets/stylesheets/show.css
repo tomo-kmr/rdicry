@@ -26,15 +26,24 @@
 }
 
 .main-center h1 {
-  font-size : 48px; 
-  line-height : 1;
+  font-size: 36px; 
+  line-height: 1;
+  font-weight: bold;
 }
 
 .main-center h2 {
-  font-size : 36px;
-  line-height : 1.3333;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
 }
 .main-center h3 {
-  font-size : 24px;
-  line-height : 1;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+}
+.admin-btn{
+  display: flex;
+}
+.edit-btn{
+  margin-right: 40px;
 }

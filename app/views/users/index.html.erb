@@ -1,11 +1,7 @@
 <%= render "shared/header" %>
 
 <div class='main' >
-  <div class='main-left' >
-    <p class='main-left-title'>
-      カテゴリ別
-    </p>
-  </div>
+  <%= render "shared/category" %>
   <div class='main-center' >
     <div>
       <h2>はじめに</h2>
@@ -27,9 +23,5 @@
         <%=link_to '登録', new_user_registration_path, class:'' %>
     </div>
   </div>
-  <div class='main-right' >
-    <p class='main-right-title'>
-      新着内容
-    </p>
-  </div>
+  <%= render "shared/leftside" %>
 </div>

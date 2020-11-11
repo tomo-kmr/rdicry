@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<div class='main' >
+  <%= render "shared/category" %>
+
+  <div class='main-center' >
+    <p class='main-left-title'>
+      <%= "#{@keyword}" %>の本文中の検索結果は <%=@codes.count%>件です
+    </p>
+    <% if @codes.present? %> 
+      <table class='index-table'>
+        <tbody>
+          <tr>
+            <th class='index-category'>カテゴリ</th>
+            <td class='index-title'>タイトル</td>
+          </tr>
+          <%= render partial: 'code', collection: @codes %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+  <div class='main-right' >
+    <p class='main-right-title'>
+      新着内容
+    </p>
+  </div>
+</div>

@@ -1,14 +1,10 @@
 <%= render "shared/header" %>
 
 <div class='main' >
-  <div class='main-left' >
-    <p class='main-left-title'>
-      カテゴリ別
-    </p>
-  </div>
+  <%= render "shared/category" %>
   <div class='main-center' >
     <p class='main-left-title'>
-      目次です(見たい番号をクリックしてください)
+      目次です(見たいタイトルをクリックしてください)
     </p>
     <table class='index-table'>
       <tbody>
@@ -20,9 +16,5 @@
       </tbody>
     </table>
   </div>
-  <div class='main-right' >
-    <p class='main-right-title'>
-      新着内容
-    </p>
-  </div>
+  <%= render "shared/leftside" %>
 </div>

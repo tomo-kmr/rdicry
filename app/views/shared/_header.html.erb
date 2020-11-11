@@ -5,7 +5,7 @@
   <p class='header-sub-title'>
     Ruby on railsを学習し始めた自分が、〜したい時どう書くんだったっけ？をまとめたサイトです
   </p>
-  <%= form_with(url: "", local: true, method: :get, class: "search-form") do |form| %>
+  <%= form_with(url: search_codes_path, local: true, method: :get, class: "search-form") do |form| %>
       <%= form.text_field :keyword, placeholder: 'キーワードから探す', class: 'input-box' %>
       <button class="search-button">
         検索

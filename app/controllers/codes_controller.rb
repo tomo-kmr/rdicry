@@ -1,9 +1,14 @@
 class CodesController < ApplicationController
   before_action :move_to_top, except: [:index, :show, :search]
   before_action :set_code, only: [:show, :edit, :update, :destroy]
+  before_action :old_date, only: [:index, :show, :search]
 
   def index
-    @codes = Code.all
+    if params[:category].present?
+      @codes = Code.where("category = ?", params[:category])
+    else
+      @codes = Code.all
+    end
   end
 
   def new
@@ -33,6 +38,16 @@ class CodesController < ApplicationController
     end
   end
 
+  def search
+    @codes = Code.search(params[:keyword])
+    @keyword = params[:keyword]
+  end
+
+  def destroy
+    @code.destroy
+    redirect_to root_path
+  end
+
   private
 
   def move_to_top
@@ -45,5 +60,9 @@ class CodesController < ApplicationController
 
   def set_code
     @code = Code.find(params[:id])
+  end
+
+  def old_date
+    @old_date = Code.old_date
   end
 end
