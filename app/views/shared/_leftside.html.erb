@@ -1,6 +1,8 @@
 <div class='main-right' >
   <p class='main-right-date'>
-    最終更新日 : <%= @old_date.updated_at.strftime("%Y/%m/%d")%>
+    <% if @old_date.present? %>
+      最終更新日 : <%= @old_date.updated_at.strftime("%Y/%m/%d")%>
+    <% end %>
   </p>
   <p class='main-right-title'>
     新着内容
