@@ -7,7 +7,7 @@ class CodesController < ApplicationController
     if params[:category].present?
       @codes = Code.where('category = ?', params[:category])
     else
-      @codes = Code.all
+      @codes = Code.all.order(:codeno)
     end
   end
 
