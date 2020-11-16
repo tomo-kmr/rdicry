@@ -13,6 +13,7 @@
 
 .main-center {
   width: 65vw;
+  overflow: scroll;
   height: calc(100vh - 105px);
   background-color: white;
   padding: 7px 10px 0 10px;
