@@ -15,7 +15,7 @@ module MarkdownHelper
   }.freeze
 
   def markdown_to_html(md_code)
-    html_render = HTMLwithCoderay.new(filter_html: true, hard_wrap: true)
+    html_render = HTMLwithCoderay.new(hard_wrap: true)
     markdown = Redcarpet::Markdown.new(html_render, REDCARPET_OPTIONS)
     markdown.render(md_code)
   end
