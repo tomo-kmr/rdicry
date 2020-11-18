@@ -5,7 +5,7 @@ class CodesController < ApplicationController
 
   def index
     if params[:category].present?
-      @codes = Code.where('category = ?', params[:category])
+      @codes = Code.where('category = ?', params[:category]).order(:codeno)
     else
       @codes = Code.all.order(:codeno)
     end
